@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} bg-light-black mt-28` }>
+      <body className={`${poppins.className}  bg-[#030637] mt-28` }>
         <Header />
         <Wrapper className="py-10">
         {children}
