@@ -3,6 +3,8 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Wrapper from "@/components/Wrapper";
+import { QueryClient, QueryClientProvider } from "react-query";
+import QueryClientWrapper from "@/components/QueryClient";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -24,10 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className}  bg-[#030637] mt-28` }>
-        <Header />
-        <Wrapper className="py-10">
-        {children}
-        </Wrapper>
+        <QueryClientWrapper>
+          <Header />
+          <Wrapper className="py-10">
+          {children}
+          </Wrapper>
+        </QueryClientWrapper>
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 export interface WorkoutCardProps {
-    group: string;
-    createdAt: Date;
-    type: "cardio" | "strength";
+    name: string;
+    created_at: Date;
+    training: "Cardio" | "Strength";
     id: string;
 }

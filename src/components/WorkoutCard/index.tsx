@@ -2,7 +2,7 @@ import Image from "next/image";
 import { WorkoutCardProps } from "./types";
 import { useRouter } from "next/navigation";
 
-const WorkoutCard = ({createdAt, group, type, id}:WorkoutCardProps) => {
+const WorkoutCard = ({created_at, name, training, id}:WorkoutCardProps) => {
     const router = useRouter();
 
     const handleClick = () => {
@@ -15,11 +15,11 @@ const WorkoutCard = ({createdAt, group, type, id}:WorkoutCardProps) => {
             onClick={handleClick}
             >
         <div>
-            <h3 className="text-orange-500 text-2xl">{group}</h3>
-            <p className="text-orange-300 font-light text-sm">{createdAt.toDateString()}</p>
+            <h3 className="text-orange-500 text-2xl">{name}</h3>
+            <p className="text-orange-300 font-light text-sm">{new Date(created_at).toDateString()}</p>
         </div>
-        {type === "strength" && <Image src="/biceps.png" width={90} height={50} alt="Dumbbell" />}
-        {type === "cardio" && <Image src="/heart.png" width={90} height={50} alt="Dumbbell" />}
+        {training === "Strength" && <Image src="/biceps.png" width={90} height={50} alt="Dumbbell" />}
+        {training === "Cardio" && <Image src="/heart.png" width={90} height={50} alt="Dumbbell" />}
     </div>
 }
 
