@@ -16,16 +16,13 @@ export default function Home() {
   if(isLoading || !data) return null;
   
   const workouts = data.workouts;
-  console.log(data.workouts)
 
   return (
-    <main>
-
-
+    <main className="mt-10">
       <div className="flex justify-between items-center mb-8">
         <Title>Meus treinos</Title>
         <button 
-          className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl transition-all hover:scale-105 cursor-pointer"
+          className="flex items-center gap-2 bg-[#665A48] px-4 py-3 rounded-xl transition-all hover:scale-105 cursor-pointer text-white"
           onClick={() => router.push("/criar-treino")}
           >
           +

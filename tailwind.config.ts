@@ -19,6 +19,13 @@ const config = {
     },
     extend: {
       colors: {
+        greenGroup: {
+          100: "1F192F",
+          200: "2D6073",
+          300: "65B8A6",
+          400: "B5E8C3",
+          500: "F0F7DA" 
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

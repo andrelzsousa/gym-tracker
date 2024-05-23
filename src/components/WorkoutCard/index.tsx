@@ -10,13 +10,13 @@ const WorkoutCard = ({created_at, name, training, id}:WorkoutCardProps) => {
     }
 
     return <div 
-            className="w-72 h-40 rounded shadow-orange-500 shadow-lg p-8
-            bg-[#B5C0D0] flex justify-between hover:scale-[103%] transition-all cursor-pointer"
+            className="w-72 h-40 rounded shadow-greenGroup-400 shadow p-8
+            bg-greenGroup-200 flex justify-between hover:scale-[103%] transition-all cursor-pointer"
             onClick={handleClick}
             >
         <div>
-            <h3 className="text-orange-500 text-2xl">{name}</h3>
-            <p className="text-orange-300 font-light text-sm">{new Date(created_at).toDateString()}</p>
+            <h3 className="text-green-100 text-2xl">{name}</h3>
+            <p className="text-[#883a4b] font-light text-sm">{new Date(created_at).toDateString()}</p>
         </div>
         {training === "Strength" && <Image src="/biceps.png" width={90} height={50} alt="Dumbbell" />}
         {training === "Cardio" && <Image src="/heart.png" width={90} height={50} alt="Dumbbell" />}
