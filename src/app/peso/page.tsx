@@ -30,7 +30,7 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
+const options = {
   responsive: true,
   plugins: {
     legend: {
@@ -81,21 +81,11 @@ export default function Home() {
     datasets: [
       {
         label: 'Peso',
-        data: weightsChart,
+        data: weightsChart?.reverse(),
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
         tension: 0.25
-      },
-      {
-        label: "Peso abate",
-        fill: true,
-        backgroundColor: "#000000",
-        borderColor: "#cccccc",
-        borderWidth: 3,
-        data: targetWeightData?.slice(0, 1),
-        tension: 0.1,
-        pointRadius: 5,
-      },
+      }
     ],
   };
 
@@ -145,7 +135,8 @@ export default function Home() {
                 <input 
                   type="number" 
                   className="flex-1 p-2 border border-gray-300 rounded" 
-                  value={currentWeight} 
+                  value={currentWeight || ""} 
+                  placeholder="Insira seu peso"
                   onChange={(e) => setCurrentWeight(Number(e.target.value))} 
                 />
               <button className="w-10 h-10 bg-white rounded" onClick={createRecord}>+</button>

@@ -16,8 +16,8 @@ const getAllWorkoutsQueryFn = async (): Promise<workoutResponse> => {
 
 const useAllWorkouts = (): UseQueryResult<workoutResponse> => {
     return useQuery<workoutResponse>(getAllWorkoutsQueryKey(), getAllWorkoutsQueryFn, {
-        staleTime: 20000,
-        cacheTime: 10000
+        staleTime: 10000,
+        cacheTime: 20000
     });
 }
 

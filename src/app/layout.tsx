@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className}  bg-greenGroup-500 mt-28` }>
+      <body className={`${poppins.className}  bg-gray-300 mt-28` }>
         <QueryClientWrapper>
           <Header />
           <Wrapper className="py-10">

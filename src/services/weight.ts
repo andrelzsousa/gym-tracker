@@ -2,11 +2,11 @@ import { WeightEntity } from "@/types/weight";
 import axios from "axios";
 
 export const getAllWeights = async () => {
-    const response = await axios.get("http://localhost:3333/weights/1e666124-6823-414a-8683-466e206687b0");
+    const response = await axios.get("http://localhost:3333/weights/c8bbaaec-1ea5-4850-b4ee-120ca7e9b51a");
     return response.data;
 }
 
 export const createWeight = async (data: Partial<WeightEntity>) => {
-    const response = await axios.post("http://localhost:3333/weights/1e666124-6823-414a-8683-466e206687b0", data);
+    const response = await axios.post("http://localhost:3333/weights/c8bbaaec-1ea5-4850-b4ee-120ca7e9b51a", data);
     return response.data;
 }

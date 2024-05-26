@@ -26,6 +26,14 @@ const config = {
           400: "B5E8C3",
           500: "F0F7DA" 
         },
+        gray: {
+          100: "#1D2939",
+          300: "#101323",
+        },
+        red: {
+          100: "#C73659",
+          300: "#A91D3A"
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
