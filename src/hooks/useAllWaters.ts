@@ -13,7 +13,8 @@ const getAllWatersQueryFn = async (): Promise<WaterEntity[]> => {
 const useAllWaters = (): UseQueryResult<WaterEntity[]> => {
     return useQuery<WaterEntity[]>(getAllWatersQueryKey(), getAllWatersQueryFn, {
         staleTime: 20000,
-        cacheTime: 10000
+        cacheTime: 10000,
+        enabled: localStorage.getItem("uid") ? true : false
     });
 }
 

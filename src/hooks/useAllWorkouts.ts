@@ -17,7 +17,8 @@ const getAllWorkoutsQueryFn = async (): Promise<workoutResponse> => {
 const useAllWorkouts = (): UseQueryResult<workoutResponse> => {
     return useQuery<workoutResponse>(getAllWorkoutsQueryKey(), getAllWorkoutsQueryFn, {
         staleTime: 10000,
-        cacheTime: 20000
+        cacheTime: 20000,
+        enabled: localStorage.getItem("uid") ? true : false
     });
 }
 

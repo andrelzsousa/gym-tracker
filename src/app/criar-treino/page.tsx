@@ -44,7 +44,7 @@ const CriarTreinoPage = () => {
     },{
         onSuccess: () => {
             queryClient.invalidateQueries(["workouts"])
-            router.push("/")
+            router.push("/treinos")
         }
     })
 
@@ -53,7 +53,7 @@ const CriarTreinoPage = () => {
     },{
         onSuccess: () => {
             queryClient.invalidateQueries(["workouts"])
-            router.push("/")
+            router.push("/treinos")
         }
     })
 
@@ -71,7 +71,7 @@ const CriarTreinoPage = () => {
                 description,
                 duration,
                 created_at: date as Date,
-                userId: "c8bbaaec-1ea5-4850-b4ee-120ca7e9b51a"
+                userId: localStorage.getItem("uid") || ""
             };
             mutation.mutateAsync(newData);
             return;
@@ -83,7 +83,7 @@ const CriarTreinoPage = () => {
             description,
             duration,
             created_at: date as Date,
-            userId: "c8bbaaec-1ea5-4850-b4ee-120ca7e9b51a",
+            userId: localStorage.getItem("uid") || "",
             id: workoutToEdit.id
         };
         editMutation.mutateAsync(editData);

@@ -15,7 +15,8 @@ const getAllWeightsQueryFn = async (): Promise< WeightEntity[]> => {
 const useAllWeights = (): UseQueryResult< WeightEntity[]> => {
     return useQuery<WeightEntity[]>(getAllWeightsQueryKey(), getAllWeightsQueryFn, {
         staleTime: 20000,
-        cacheTime: 10000
+        cacheTime: 10000,
+        enabled: localStorage.getItem("uid") ? true : false
     });
 }
 
