@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Wrapper from "@/components/Wrapper";
 import { QueryClient, QueryClientProvider } from "react-query";
 import QueryClientWrapper from "@/components/QueryClient";
+import { Suspense } from "react";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -29,7 +30,10 @@ export default function RootLayout({
         <QueryClientWrapper>
           <Header />
           <Wrapper className="py-10">
-          {children}
+            <Suspense>
+
+              {children}
+            </Suspense>
           </Wrapper>
         </QueryClientWrapper>
       </body>

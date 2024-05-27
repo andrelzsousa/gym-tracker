@@ -3,7 +3,6 @@
 import Title from "@/components/Title"
 import useAllWorkouts from "@/hooks/useAllWorkouts";
 import { useSearchParams } from "next/navigation"
-import { Suspense } from "react";
 
 const Treino = () => {
 
