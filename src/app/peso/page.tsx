@@ -123,7 +123,7 @@ export default function Home() {
   if(!weights) return <div>Carregando...</div>
 
   return (
-    <main>
+    <main className="mt-10">
       <Title className="mb-8">Meu Peso</Title>
       <div className="w-full grid grid-cols-5 gap-10">
         <div className="col-span-3 bg-white h-fit rounded p-4">

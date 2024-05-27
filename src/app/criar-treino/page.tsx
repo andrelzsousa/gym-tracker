@@ -47,7 +47,7 @@ const CriarTreinoPage = () => {
     }
 
     return (
-    <div>
+    <div className="mt-10">
         <Title className="mb-8">Criar treino</Title>
         <form className="flex flex-col gap-8" onSubmit={handleSubmit}>
             <div className="flex gap-12">
@@ -90,7 +90,7 @@ const CriarTreinoPage = () => {
                 className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl transition-all hover:scale-105 cursor-pointer w-40 justify-center"
                 type="submit"
             >
-            Criar treino
+            Criar 
             </button>
         </form>
     </div>
