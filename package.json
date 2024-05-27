@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-context-menu": "^2.1.5",
     "axios": "^1.7.0",
     "chart.js": "^4.4.3",
     "class-variance-authority": "^0.7.0",
